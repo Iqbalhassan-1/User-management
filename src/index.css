@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-dark-medium {
+    @apply text-gray-900 font-medium text-base;
+  }
+
+  .text-blue-medium {
+    @apply text-sky-600 font-medium text-base;
+  }
+
+  .heading-primary {
+    @apply text-2xl sm:text-3xl md:text-4xl font-semibold text-black;
+  }
+
+  .heading-secondary {
+    @apply text-black font-medium text-lg;
+  }
+
+  .flex-left {
+    @apply flex items-center;
+  }
+  .flex-btw {
+    @apply flex items-center justify-between;
+  }
+}
+
+.nav .active {
+  color: #0284c7;
+}
+
+.active-route.active {
+  border-bottom: 2px solid #0284c7;
+}
+
+/* width */
+.tabs-scroll::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* /* Track */
+.tabs-scroll::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+.tabs-scroll::-webkit-scrollbar-thumb {
+  background: #b2afaf;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.tabs-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(9, 167, 246, 0.599);
+}
+
+/* Modal Animation */
+.opac {
+  animation: slideInTop 500ms ease-out;
+}
+
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(5px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 8px solid rgb(209 213 219);
+  border-bottom-color: rgb(2 132 199);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
